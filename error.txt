@@ -1,0 +1,22 @@
+error: yuvan@yuvan:~/Desktop/project$ git push origin master
+Username for 'https://github.com': yuvankumarL
+Password for 'https://yuvankumarL@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/yuvankumarL/gitlearning.git/'
+
+
+
+token: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
+
+url: https://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@github.com/yuvankumarL/gitlearning.git
+
+yuvan@yuvan:~/Desktop/project$ git remote set-url origin https://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@github.com/yuvankumarL/gitlearning.git
+yuvan@yuvan:~/Desktop/project$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 214.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/yuvankumarL/gitlearning.git
+ * [new branch]      master -> master
+
