@@ -11,7 +11,7 @@ token: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
 
 url: https://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@github.com/yuvankumarL/gitlearning.git
 
-yuvan@yuvan:~/Desktop/project$ git remote set-url origin https://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@github.com/yuvankumarL/gitlearning.git
+yuvan@yuvan:~/Desktop/project$ git remote set-url origin https://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@github.com/yuvankumarL/schoolManagement.git
 yuvan@yuvan:~/Desktop/project$ git push origin master
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
@@ -20,3 +20,6 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/yuvankumarL/gitlearning.git
  * [new branch]      master -> master
 
+
+
+Password: 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
