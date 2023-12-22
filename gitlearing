@@ -1,0 +1,124 @@
+scenario: taking picture of the guests visting marriage
+
+1.
+yuvan@yuvan:~/Desktop/project$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	name.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+-->this untracked file is the guests who are not clicked picture, but they came to marriage.
+
+2.
+yuvan@yuvan:~/Desktop/project$ git add name.txt
+yuvan@yuvan:~/Desktop/project$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   name.txt
+
+--> Now we can send the guests on the stage "git add .", here '.' reprsent the sending the whole persons in the queue to the stage. instead we can specify a name to send to the stage "git add name.txt"
+
+3.
+yuvan@yuvan:~/Desktop/project$ git commit -m "name.txt file added"
+[master (root-commit) 3cc8968] name.txt file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 name.txt
+
+
+--> Now we are clicking the picture of the persons on the stage and storing it in the album repository.
+
+
+4. 
+yuvan@yuvan:~/Desktop/project$ git restore --staged name.txt
+
+--> this will remove the persons from the stage.
+
+
+5.
+yuvan@yuvan:~/Desktop/project$ rm -rf name.txt
+yuvan@yuvan:~/Desktop/project$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    name.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+yuvan@yuvan:~/Desktop/project$ git add name.txt
+yuvan@yuvan:~/Desktop/project$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    name.txt
+
+yuvan@yuvan:~/Desktop/project$ git commit -m "name.txt file deleted"
+[master 14f97d1] name.txt file deleted
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 name.txt
+
+--> here the file is deleted
+
+6. 
+yuvan@yuvan:~/Desktop/project$ git log
+commit 14f97d18d59cca82eea022ef1efd9d108c639b8d (HEAD -> master)
+Author: Yuvan <yuvanyuku@gmail.com>
+Date:   Fri Dec 22 11:15:02 2023 +0530
+
+    name.txt file deleted
+
+commit 3ee7822042c7d20c42a1ff658c9257982f240291
+Author: Yuvan <yuvanyuku@gmail.com>
+Date:   Fri Dec 22 11:10:39 2023 +0530
+
+    name.txt file modifies
+
+commit 3cc89686b06d8a87d525e55fca160648339e77fb
+Author: Yuvan <yuvanyuku@gmail.com>
+Date:   Fri Dec 22 10:54:47 2023 +0530
+
+    name.txt file added
+
+--> get history of the changes made
+
+
+7.
+yuvan@yuvan:~/Desktop/project$ git reset 3cc89686b06d8a87d525e55fca160648339e77fb
+Unstaged changes after reset:
+D	name.txt
+
+
+--> this will delete the logs above the "3cc89686b06d8a87d525e55fca160648339e77fb" log.
+
+8.
+
+yuvan@yuvan:~/Desktop/project$ git stash
+Saved working directory and index state WIP on master: 3cc8968 name.txt file added
+
+
+--> this will get us back to the first stage where the name.txt file was created.
+
+
+9.
+
+yuvan@yuvan:~/Desktop/project$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.79 KiB | 1.79 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/yuvankumarL/gitlearning.git
+   3cc8968..d70247e  master -> master
+
+--> pushing the file in github.
+
+
